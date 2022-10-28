@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".ui.uploadstory.AddStoryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutAddStory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layoutImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/layoutShowImage"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@drawable/bg_upload_image"
+                android:layout_margin="@dimen/margin_10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnRemoveImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/ic_delete"/>
+
+                <ImageView
+                    android:id="@+id/ivPickedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:src="@drawable/ic_register_ilustration" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutUploadImage"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginEnd="@dimen/margin_10dp"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:background="@drawable/bg_upload_image"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_upload" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="@string/text_unggah_gambar"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btnImageUpload"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_10dp"
+                    android:background="@drawable/blue_button_active_background"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:text="@string/text_unggah" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInputDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_text"
+            app:layout_constraintTop_toBottomOf="@+id/layoutImage">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etImageDescription"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:hint="@string/hint_image_desc"
+                android:fontFamily="@font/helvetica"
+                android:inputType="textMultiLine"
+                android:imeOptions="actionDone"
+                android:minLines="5"
+                android:textColorHint="#757575" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSendStory"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_10dp"
+            android:background="@drawable/blue_button_disable_background"
+            android:text="@string/text_button_submit"
+            android:textColor="#212121"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/helvetica_bold"
+            android:enabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/layoutInputDescription"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:visibility="gone"
+            android:indeterminateTint="@android:color/holo_blue_light"
+            app:layout_constraintTop_toBottomOf="@+id/layoutInputDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".ui.register.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_20dp">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_register_ilustration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:viewBindingIgnore="true"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvLoginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_register_title"
+            android:textSize="30sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/helvetica_bold"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/layoutInputName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_text"
+            app:layout_constraintTop_toBottomOf="@+id/tvLoginTitle">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:srcCompat="@drawable/ic_people"
+                app:tint="@android:color/black"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/helvetica"
+                android:hint="@string/text_insert_name"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:textColor="@android:color/black"
+                android:textColorHint="#757575"
+                tools:layout_editor_absoluteX="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_text"
+            app:layout_constraintTop_toBottomOf="@+id/layoutInputName">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                app:srcCompat="@drawable/ic_email"
+                app:tint="@android:color/black"
+                tools:ignore="ContentDescription" />
+
+            <com.hokagelab.storyapp.customview.EmailEditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/helvetica"
+                android:hint="@string/text_insert_email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/black"
+                android:textColorHint="#757575"
+                tools:layout_editor_absoluteX="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutInputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="18dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_text"
+            app:layout_constraintTop_toBottomOf="@+id/layoutInputEmail">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_password"
+                app:tint="@android:color/black"
+                tools:ignore="ContentDescription" />
+
+            <com.hokagelab.storyapp.customview.PasswordEditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/helvetica"
+                android:hint="@string/text_insert_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:textColorHint="#757575" />
+
+            <ImageView
+                android:id="@+id/ivShowHidePass"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_visibility_off"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/blue_button_disable_background"
+            android:text="@string/text_button_register"
+            android:textColor="#212121"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/helvetica_bold"
+            android:enabled="false"
+            app:layout_constraintTop_toBottomOf="@+id/layoutInputPassword"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBarRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            android:indeterminateTint="@android:color/holo_blue_light"
+            app:layout_constraintTop_toBottomOf="@+id/layoutInputPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:gravity="center"
+            android:text="@string/text_have_account"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/helvetica"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegister"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

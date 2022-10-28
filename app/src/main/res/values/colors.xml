@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#FF4081</color>
+    <color name="header">#304FFE</color>
+    <color name="toolbar_background">#2979FF</color>
+    <color name="background_app_color">#F1F8E9</color>
+    <color name="colorWarning">#FFCC00</color>
+    <color name="color_blue_200">#90CAF9</color>
+    <color name="color_blue_500">#2196F3</color>
+    <color name="textColor">#000000</color>
+    <color name="textColorSecondary">#9E9E9E</color>
+    <color name="dialogColor">#FFFFFF</color>
+    <color name="color_light_blue_50">#E1F5FE</color>
+    <color name="color_blue_gray_50">#ECEFF1</color>
+</resources>

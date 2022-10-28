@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/dialogColor">
+
+    <ImageView
+        android:id="@+id/ivDialogLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:src="@drawable/ic_success"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvDialogInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="@dimen/margin_25dp"
+        android:layout_marginStart="@dimen/margin_25dp"
+        android:text="@string/text_dialog_informasi"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/helvetica_bold"/>
+
+    <Button
+        android:id="@+id/btnDialogAction"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="@dimen/margin_16dp"
+        android:background="@drawable/green_button_background"
+        android:text="@string/text_button_oke"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/helvetica_bold"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/layoutConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnDialogNo"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_16dp"
+            android:background="@drawable/transparent_button_background"
+            android:text="@string/no"
+            android:textSize="16sp"
+            android:textColor="@color/textColor"
+            android:textAllCaps="false"
+            android:fontFamily="@font/helvetica_bold"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/btnDialogYes"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin_16dp"
+            android:background="@drawable/blue_button_active_background"
+            android:text="@string/yes"
+            android:textSize="16sp"
+            android:textColor="@color/textColor"
+            android:textAllCaps="false"
+            android:fontFamily="@font/helvetica_bold"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+</LinearLayout>

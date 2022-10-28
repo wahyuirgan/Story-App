@@ -1,0 +1,76 @@
+<resources>
+    <!-- Base application theme. -->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/toolbar_background</item>
+        <item name="colorPrimaryDark">@color/header</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background_app_color</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:dialogTheme">@style/DialogTheme</item>
+        <item name="android:alertDialogTheme">@style/DialogTheme</item>
+        <item name="dialogTheme">@style/DialogTheme</item>
+        <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/toolbar_background</item>
+        <item name="colorPrimaryDark">@color/header</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background_app_color</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:dialogTheme">@style/DialogTheme</item>
+        <item name="android:alertDialogTheme">@style/DialogTheme</item>
+        <item name="dialogTheme">@style/DialogTheme</item>
+        <item name="alertDialogTheme">@style/DialogTheme</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PreferenceTheme" parent="PreferenceThemeOverlay.v14">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:colorAccent">@color/textColor</item>
+
+        <item name="android:dialogTheme">@style/DialogTheme</item>
+        <item name="android:alertDialogTheme">@style/DialogTheme</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textColorPrimary">@color/textColor</item>
+        <item name="android:textColorSecondary">@color/textColor</item>
+        <item name="android:textColorHighlight">@color/textColor</item>
+        <item name="android:textColorTertiary">@color/textColor</item>
+        <item name="textColorAlertDialogListItem">@color/textColor</item>
+        <item name="android:editTextColor">@color/textColor</item>
+        <item name="colorControlActivated">@color/textColor</item>
+
+        <item name="color">@color/textColor</item>
+        <item name="android:popupBackground">@color/dialogColor</item>
+        <item name="android:windowBackground">@color/dialogColor</item>
+        <item name="android:itemBackground">@color/dialogColor</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+    </style>
+
+</resources>
